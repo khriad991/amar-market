@@ -103,16 +103,17 @@ model policies {
 }
 
 model product_carts {
-  id         Int      @id @default(autoincrement())
+  id         Int    @id @default(autoincrement())
   user_id    Int
   product_id Int
-  color      String   @db.VarChar(200)
-  size       String   @db.VarChar(200)
+  color      String @db.VarChar(200)
+  size       String @db.VarChar(200)
   qty        Float
-  createdAt  DateTime @default(now()) @db.Timestamp(0)
-  updatedAt  DateTime @default(now()) @db.Timestamp(0)
-  products   products @relation(fields: [product_id], references: [id])
-  users      users    @relation(fields: [user_id], references: [id])
+
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @db.Timestamp(0)
+  products  products @relation(fields: [product_id], references: [id])
+  users     users    @relation(fields: [user_id], references: [id])
 
   @@index([product_id], map: "product_carts_product_id_fkey")
   @@index([user_id], map: "product_carts_user_id_fkey")
