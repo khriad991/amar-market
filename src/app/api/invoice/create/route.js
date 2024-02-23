@@ -125,7 +125,7 @@ export const GET = async (req, res) => {
         let SSLJson = await SSLRes.json();
 
         return NextResponse.json({status:"success",data:SSLJson})
-    }catch (e) {
+    }catch (e) {n
         return NextResponse.json({status:"fail",data:e})
     }
 }

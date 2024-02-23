@@ -30,8 +30,9 @@ export const config = {
     matcher:[
         '/api/cart/:path*',
         '/api/invoice/:path*',
-        '/api/wish/:path*',
         '/api/user/profile/:path*',
+        '/api/user/review/:path*',
+        '/api/wish/:path*',
     ]
 }
 
