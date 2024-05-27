@@ -9,7 +9,7 @@ export async function GET(req,res){
         const email= searchParams.get("email");
 
         const otp = Math.floor(100000 + Math.random() * 900000 ).toString();
-        const emailText = `Amar-Market Verification code is ${otp}`;
+        const emailText = `Amar-Market Verification code is ${otp} send by ${email}`;
         const emailSubject = "Amar-Market Verification Code";
         await SendEmail(email,emailText,emailSubject)
 
