@@ -13,7 +13,6 @@ const About =async () => {
     return (
         <div className="container my-4">
             <div className="row">
-                Login Component
                 <div className="col-md-12">
                     <div className="card p-4"> {parser(data[0]['des'])} </div>
                 </div>
