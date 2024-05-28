@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 async function getData(){
-    await  new Promise(resolve => setTimeout(resolve, 2500))
+    await  new Promise(resolve => setTimeout(resolve, 1500))
     return (await (await fetch(`${process.env.HOST}/api/product/category-list`)).json())['data'];
 }
 const CategoriesComponent = async () => {
